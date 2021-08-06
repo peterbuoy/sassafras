@@ -1,0 +1,10 @@
+@use "_base.scss";
+@use "_layout.scss";
+@use '_component.scss';
+
+// Why not use @import?
+// It makes a bunch of things global.
+// https://sass-lang.com/documentation/at-rules/import
+
+// What's with the underscores?
+// Prefixing an underscore tells SASS to not transpile it.
