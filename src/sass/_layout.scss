@@ -8,7 +8,7 @@ html {
   body {
     background-color: base.$colorSnow;
   }
-  @media (min-width: base.$maxWidth) {
+  @media (min-width: base.$minWidth) {
     body {
       width: 60%;
       margin: auto;
@@ -35,7 +35,7 @@ header {
     font-size: 2rem;
     display: none;
   }
-  @media (min-width: base.$maxWidth) {
+  @media (min-width: base.$minWidth) {
     h1 {
       display: block;
     }
