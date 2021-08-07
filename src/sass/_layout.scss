@@ -1,52 +1,54 @@
 // overall layout of the web page such as container and grid systems.
-
 @use '_base.scss' as base;
 
 html {
+  font-size: base.$fontSizeMin;
   height: 100%;
   background-image: linear-gradient(white, base.$colorRootBeer);
   body {
-    background-image: linear-gradient(base.$colorRootBeer, white);
-    opacity: 0.7;
-    width: 70%;
-    margin: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0 0.05rem grey;
+    background-color: base.$colorSnow;
   }
-  @media (max-width: 500px) {
+  @media (min-width: base.$maxWidth) {
     body {
-      background-color: black;
-      width: 100%;
-      border-radius: 0;
-    }
-    header {
-      border-radius: 0;
-    }
-    h1 {
-      display: none;
+      width: 60%;
+      margin: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0 0.05rem grey;
     }
   }
 }
 
 header {
-  border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: base.$colorRootBeer;
   background-image: linear-gradient(
     to left,
-    base.$colorHeaderSnow -25%,
-    base.$colorHeaderBlue 75%
+    base.$colorSnow -25%,
+    base.$colorBlue 75%
   );
   img {
     max-height: 2.2rem;
     margin: 1em;
   }
+  h1 {
+    font-size: 2rem;
+    display: none;
+  }
+  @media (min-width: base.$maxWidth) {
+    h1 {
+      display: block;
+    }
+  }
 }
 
-div {
+div.content-wrapper {
+  margin: 1em;
+  border-radius: 0.2em;
+  border: solid base.$colorRootBeer 0.1em;
+  box-shadow: 0 0 0 0.1rem grey;
   h2 {
+    font-size: 1.5rem;
     text-align: center;
   }
   p {
